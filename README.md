@@ -1,1 +1,1 @@
-# goit-js-hw-07
+https://bartosz-baranski.github.io/goit-js-hw-07/

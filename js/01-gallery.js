@@ -38,10 +38,36 @@ galleryImg.addEventListener("click", (e) => {
   }
   const instance = basicLightbox.create(
     `<img src="${e.target.dataset.source}">`
+    // {
+    //   onShow: (instance) => {
+    //     document.addEventListener(`keydown`, (e) => {
+    //       if (e.keycode !== 27) {
+    //         return;
+    //       }
+    //       instance.close;
+    //     });
+    //   },
+    //   onClose: (instance) => {
+    //     document.removeEventListener(`keydown`, (e) => {
+    //       if (e.keyCode !== 27) {
+    //         return;
+    //       }
+    //       instance.close();
+    //     });
+    // },
+    // }
   );
 
   instance.show();
-
+  // function keyListener() {
+  //   if (keydown !== "Escape") {
+  //     keydown = null;
+  //   }
+  //   return;
+  // }
+  // onShow: (instance) => {
+  //   document.addEventListener(keyListener);
+  // };
   const visible = basicLightbox.visible();
   if (visible) {
     document.addEventListener("keyup", ({ key }) => {
@@ -51,4 +77,6 @@ galleryImg.addEventListener("click", (e) => {
     });
   }
 });
+
 galleryCreate();
+// keyListener();
